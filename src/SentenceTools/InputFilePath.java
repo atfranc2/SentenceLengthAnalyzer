@@ -2,15 +2,10 @@ package SentenceTools;
 
 import java.util.Scanner;
 
-public class InputFilePath {
+public class InputFilePath implements InputFilePathInterface {
 
-    private String filePath;
-
-    public InputFilePath(){
-        inputPath();
-    }
-
-    public void inputPath() {
+    @Override
+    public String inputPath() {
         Scanner scan = new Scanner(System.in);
         String filePath = "";
         boolean isValidPath = false;
@@ -22,7 +17,7 @@ public class InputFilePath {
             isValidPath = checkFilePath(filePath);
         }
 
-        this.filePath = filePath;
+        return filePath;
     }
 
     // Verifies that file path is a valid one
@@ -40,10 +35,6 @@ public class InputFilePath {
             System.out.println("Invalid file type entered. Specify a valid file type");
 
         return isValidFile;
-    }
-
-    public String getFilePath(){
-        return this.filePath;
     }
 
 }
