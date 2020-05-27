@@ -1,8 +1,6 @@
 package SentenceTools;
 
-import java.util.Arrays;
-
-public class ImportFile {
+public class ImportFile implements ImportFileInterface{
 
     private ReadFileInterface readFile;
     private InputFilePathInterface inputFilePath;
@@ -15,6 +13,7 @@ public class ImportFile {
 
     }
 
+    @Override
     public String importFile() {
         String filePath = inputFilePath.inputPath();
         return readFile.parse(filePath);

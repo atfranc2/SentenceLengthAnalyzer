@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class InputDelimiters implements InputDelimitersInterface {
 
-    private String[] validSentenceDelimiters = {".", "!", "?", ",", "/"};
+    private String[] validSentenceDelimiters = {".", "!", "?", ",", "/", ":"};
 
     private String[] addElement(String[] list, String element){
         int originalLength = list.length;

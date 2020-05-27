@@ -7,11 +7,10 @@ public class Main {
     public static void main(String args[]){
 
         // Test File: C:\Users\Owner\MyFiles\TestDoc.txt
-        // var rawFile = new ImportFile(new ReadFile(), new InputFilePath()).importFile();
-        var delims = new AnalyzeFile(new InputDelimiters());
-        // System.out.println(rawFile);
-        delims.analyzeFile();
+        var fileImporter = new ImportFile(new ReadFile(), new InputFilePath());
 
+        var fileAnalyzer = new AnalyzeFile(fileImporter, new InputDelimiters(), new MeasureSentences());
+        fileAnalyzer.analyzeFile(3);
 
     }
 
