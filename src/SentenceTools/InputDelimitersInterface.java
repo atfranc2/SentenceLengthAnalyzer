@@ -1,5 +1,5 @@
 package SentenceTools;
 
 public interface InputDelimitersInterface {
-    String inputDelimiters();
+    String[] inputDelimiters() throws InvalidDelimiterException;
 }
